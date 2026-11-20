@@ -1,11 +1,10 @@
-# ภาคผนวกออนไลน์ประกอบตำรา การสอบบัญชีตามมาตรฐาน TSA for LCE
+# แอปประจำเล่ม — การสอบบัญชีตามมาตรฐาน TSA for LCE
 
-เว็บเฉลยและเหตุผลของแบบทดสอบปรนัยท้ายบท (บทที่ 1–12) แบบโต้ตอบ ของ ดร.วิทยา อรุณศิริเพ็ชร และ อ.พงษ์ธร ดวงปัญญา
-ที่อยู่ที่พิมพ์ไว้ในตำรา (QR ท้ายแบบทดสอบทุกบท): https://drvitpd.github.io/tsa-lce-textbook/
+เว็บสถิต (GitHub Pages) ที่ https://drvitpd.github.io/tsa-lce-textbook/ สร้างจาก `site/build_site.py` + `site/data/chNN.json`
 
-## วิธีเผยแพร่ด้วย GitHub Pages (ทำครั้งเดียว)
-1. สร้าง repository ชื่อ `tsa-lce-textbook` (Public) ในบัญชี GitHub `drvitpd`
-2. อัปโหลดไฟล์ทั้งหมดในโฟลเดอร์นี้ไว้ในโฟลเดอร์ `docs/` ของ repository
-3. Settings → Pages → Source: Deploy from a branch → Branch: main, Folder: /docs → Save
-4. รอ 1–2 นาที เว็บจะขึ้นที่ https://drvitpd.github.io/tsa-lce-textbook/
-   (ถ้าใช้ชื่อ repository อื่น ต้องสร้าง QR ใหม่ด้วย `python3 build_site.py <URL ใหม่>` แล้วจัดเล่มใหม่)
+- `index.html` สารบัญ 12 บท และคำอธิบายการใช้คู่กับเล่ม
+- `chNN.html` หน้าต่อบท 5–6 แท็บ: แบบทดสอบ (เฉลย+เหตุผล, อัตนัย) · ประเมินตนเองตาม LO (บันทึกใน localStorage) · อภิธานศัพท์ · กรณีศึกษาเพิ่มเติม (เปิดแนวตอบ) · กระดาษทำการ (+ .docx) · ทบทวนวรรณกรรม (บท 1, 5, 6) — เปิดแท็บตรงด้วย `#quiz #self #gloss #cases #forms #lit`
+- `glossary.html` อภิธานศัพท์ทั้งเล่ม · `forms/LCE-x-xx.docx` กระดาษทำการ (TH Sarabun New 14pt) · `qr/chNN.png` รหัส QR ที่พิมพ์ในเล่ม
+
+ที่อยู่ `chNN.html` ต้องคงเดิมเสมอ เพราะ QR ในเล่มชี้ไว้แล้ว · ไม่ใช้ไลบรารีภายนอกนอกจาก Google Fonts (Sarabun)
+สร้างใหม่: `cd site && python3 build_site.py` (ต้องมี node และแพ็กเกจ docx ใน `../book/node_modules`)
