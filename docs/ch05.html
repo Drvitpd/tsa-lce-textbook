@@ -135,4 +135,27 @@ renderQuiz();renderSelf();renderGloss();document.getElementById('gq').addEventLi
 function fromHash(){const h=(location.hash||'').slice(1);showTab(document.getElementById('p-'+h)?h:'quiz',false)}
 fromHash();window.addEventListener('hashchange',fromHash);
 </script></main>
-<footer>การสอบบัญชีตามมาตรฐาน TSA for LCE · ดร.วิทยา อรุณศิริเพ็ชร และ อ.พงษ์ธร ดวงปัญญา · แอปประจำเล่ม ใช้คู่กับตำราและ Handbook TSA for LCE · เนื้อหาเป็นการถอดความของคณะผู้เขียน ไม่ใช่ถ้อยคำของมาตรฐาน</footer></body></html>
+<footer>การสอบบัญชีตามมาตรฐาน TSA for LCE · ดร.วิทยา อรุณศิริเพ็ชร และ อ.พงษ์ธร ดวงปัญญา · แอปประจำเล่ม ใช้คู่กับตำราและ Handbook TSA for LCE · เนื้อหาเป็นการถอดความของคณะผู้เขียน ไม่ใช่ถ้อยคำของมาตรฐาน</footer><div id="gate" style="position:fixed;inset:0;background:#F2F7FB;z-index:9999;display:flex;align-items:flex-start;justify-content:center;padding:28px 16px;font-family:Sarabun,sans-serif">
+<form id="gf" style="background:#fff;max-width:420px;width:100%;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.12);padding:28px 24px;text-align:center">
+<div style="font-size:22px;color:#1F3864;font-weight:600;margin-bottom:8px">แอปประจำเล่ม · ตำรา TSA for LCE</div>
+<div style="font-size:15px;color:#333;margin-bottom:16px;line-height:1.5">สำหรับผู้ซื้อตำรา การสอบบัญชีตามมาตรฐาน TSA for LCE<br>ใส่รหัสที่พิมพ์ไว้ในตำรา (หน้าเปิดบทหรือท้ายแบบทดสอบ)</div>
+<hr style="border:0;border-top:1px solid #e3e9f1;margin:0 0 16px">
+<div style="position:relative"><input id="gc" type="password" autocomplete="off" autocapitalize="characters" placeholder="รหัสเข้าแอป" style="width:100%;box-sizing:border-box;font-size:18px;padding:12px 44px 12px 14px;border:1px solid #c8d9e5;border-radius:8px;background:#F2F7FB;letter-spacing:1px">
+<button type="button" id="ge" aria-label="แสดงรหัส" style="position:absolute;right:8px;top:8px;border:0;background:none;font-size:18px;cursor:pointer">👁</button></div>
+<label style="display:flex;align-items:center;gap:8px;margin:12px 0 16px;font-size:15px;text-align:left"><input id="gr" type="checkbox" checked style="width:18px;height:18px"> จำรหัสในเครื่องนี้</label>
+<button type="submit" style="width:100%;background:#1F3864;color:#fff;border:0;border-radius:8px;padding:13px;font-size:17px;font-weight:600;cursor:pointer">เปิดแอป</button>
+<div id="gm" style="color:#7A2E2E;font-size:14px;margin-top:10px;min-height:18px"></div>
+</form></div>
+<script>
+(function(){
+var H="de20441bb713e9fd6eb53b1f53287f4b230c75f03ef9eeab0a1cfc6ffe7b8978",K="tsalce_gate";
+function ok(){try{return localStorage.getItem(K)===H||sessionStorage.getItem(K)===H}catch(e){return false}}
+function hide(){var g=document.getElementById("gate");if(g)g.remove();document.body.style.overflow=""}
+async function sha(s){var b=new TextEncoder().encode(s);var d=await crypto.subtle.digest("SHA-256",b);return Array.from(new Uint8Array(d)).map(x=>x.toString(16).padStart(2,"0")).join("")}
+if(ok()){hide();return}
+document.body.style.overflow="hidden";
+document.getElementById("ge").onclick=function(){var i=document.getElementById("gc");i.type=i.type==="password"?"text":"password"};
+document.getElementById("gf").onsubmit=async function(e){e.preventDefault();var v=document.getElementById("gc").value.trim().toUpperCase().replace(/[\s-]/g,"");
+var h=await sha(v);if(h===H){try{(document.getElementById("gr").checked?localStorage:sessionStorage).setItem(K,H)}catch(x){}hide()}else{document.getElementById("gm").textContent="รหัสไม่ถูกต้อง โปรดดูรหัสที่พิมพ์ไว้ในตำรา"}};
+})();
+</script></body></html>
