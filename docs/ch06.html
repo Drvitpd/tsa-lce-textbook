@@ -3,16 +3,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#1F3864;--bg:#F2F7FB;--b1:#E3E9F1;--b2:#EAF3EC;--b3:#FBF3E7;--b4:#F6EFE9;--ink:#1a1f2b;--mute:#5b6675;--line:#cfd8e4;--ok:#2E7D32;--bad:#B23A3A}
+:root{--navy:#1D3E9E;--orange:#E8731B;--orange2:#FBE9DA;--bg:#F2F7FB;--b1:#E3E9F1;--b2:#EAF3EC;--b3:#FBF3E7;--b4:#F6EFE9;--ink:#1a1f2b;--mute:#5b6675;--line:#cfd8e4;--ok:#2E7D32;--bad:#B23A3A}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
 body{margin:0;font-family:Sarabun,'TH Sarabun New',sans-serif;font-size:17px;line-height:1.6;color:var(--ink);background:var(--bg)}
-header{background:var(--navy);color:#fff;padding:18px 16px 14px}
-header .wrap{max-width:900px;margin:0 auto}header .t{font-size:14px;opacity:.85}header h1{margin:4px 0 0;font-size:22px;font-weight:600;line-height:1.3}
+header{background:#fff;color:var(--navy);padding:14px 16px 12px;border-bottom:4px solid var(--orange)}header .logo{height:44px;display:block;margin-bottom:8px}
+header .wrap{max-width:900px;margin:0 auto}header .t{font-size:14px;color:var(--mute)}header h1{margin:4px 0 0;font-size:22px;font-weight:600;line-height:1.3}
 header a{color:#fff;opacity:.9;text-decoration:none;font-size:14px}
 nav.tabs{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 1px 3px rgba(0,0,0,.06)}
 nav.tabs .wrap{max-width:900px;margin:0 auto;display:flex;overflow-x:auto;gap:2px;padding:0 8px;scrollbar-width:none}nav.tabs .wrap::-webkit-scrollbar{display:none}
 nav.tabs button{flex:0 0 auto;background:none;border:0;border-bottom:3px solid transparent;padding:11px 12px;font:inherit;font-size:15px;color:var(--mute);cursor:pointer;white-space:nowrap}
-nav.tabs button.on{color:var(--navy);border-color:var(--navy);font-weight:600}
+nav.tabs button.on{color:var(--navy);border-color:var(--orange);font-weight:600}
 main{max-width:900px;margin:0 auto;padding:14px 16px 28px}
 .panel{display:none}.panel.on{display:block}
 .card{background:#fff;border-radius:12px;padding:16px 18px;margin:14px 0;box-shadow:0 1px 3px rgba(0,0,0,.07)}
@@ -21,7 +21,7 @@ h4{margin:14px 0 4px;font-size:16px;color:var(--navy)}
 .box{border-radius:10px;padding:12px 14px;margin:10px 0}.b1{background:var(--b1)}.b2{background:var(--b2)}.b3{background:var(--b3)}.b4{background:var(--b4)}
 .tag{display:inline-block;font-size:12.5px;background:var(--b1);color:var(--navy);border-radius:4px;padding:1px 8px;margin:0 6px 4px 0;vertical-align:middle}
 .mute{color:var(--mute);font-size:14.5px}
-.btn{background:var(--navy);color:#fff;border:0;border-radius:8px;padding:9px 16px;font:inherit;font-size:15px;cursor:pointer;margin:6px 6px 0 0;text-decoration:none;display:inline-block}
+.btn{background:var(--orange);color:#fff;border:0;border-radius:8px;padding:9px 16px;font:inherit;font-size:15px;cursor:pointer;margin:6px 6px 0 0;text-decoration:none;display:inline-block}
 .btn.sec{background:#fff;color:var(--navy);border:1px solid var(--navy)}.btn:disabled{opacity:.5;cursor:default}
 a{color:var(--navy)}footer{text-align:center;font-size:13.5px;color:var(--mute);padding:22px 16px}
 /* quiz */
@@ -55,7 +55,7 @@ ol li,ul li{margin:6px 0}
 .steps div{border-radius:10px;padding:12px 14px}.steps b{display:block;color:var(--navy);margin-bottom:2px}
 @media (max-width:600px){body{font-size:16px}.card{padding:14px}header h1{font-size:19px}}
 @media print{nav.tabs,.btn{display:none}.panel{display:block}.why,.guide{display:block}}
-</style></head><body><header><div class="wrap"><div class="t">การสอบบัญชีตามมาตรฐาน TSA for LCE</div><h1>บทที่ 6 การตอบรับงาน การคงไว้ซึ่งความสัมพันธ์ และการสอบบัญชีรับงานเริ่มแรก</h1><a href="index.html">← หน้าหลักแอปประจำเล่ม</a></div></header><nav class="tabs"><div class="wrap"><button data-t="quiz">แบบทดสอบ</button><button data-t="self">ประเมินตนเอง</button><button data-t="gloss">อภิธานศัพท์</button><button data-t="cases">กรณีศึกษาเพิ่มเติม</button><button data-t="forms">กระดาษทำการ</button><button data-t="lit">ทบทวนวรรณกรรม</button></div></nav><main><section class="panel" id="p-quiz">
+</style></head><body><header><div class="wrap"><img class="logo" src="logo.png" alt="Dr.VIT &amp; PD"><div class="t">การสอบบัญชีตามมาตรฐาน TSA for LCE</div><h1>บทที่ 6 การตอบรับงาน การคงไว้ซึ่งความสัมพันธ์ และการสอบบัญชีรับงานเริ่มแรก</h1><a href="index.html">← หน้าหลักแอปประจำเล่ม</a></div></header><nav class="tabs"><div class="wrap"><button data-t="quiz">แบบทดสอบ</button><button data-t="self">ประเมินตนเอง</button><button data-t="gloss">อภิธานศัพท์</button><button data-t="cases">กรณีศึกษาเพิ่มเติม</button><button data-t="forms">กระดาษทำการ</button><button data-t="lit">ทบทวนวรรณกรรม</button></div></nav><main><section class="panel" id="p-quiz">
 <div class="card"><h2>แบบทดสอบปรนัย (20 ข้อ) — เฉลยและเหตุผล</h2>
 <p class="mute">ทำแบบทดสอบในเล่มให้ครบก่อน แล้วเลือกคำตอบที่นี่ ระบบเฉลยทันทีพร้อมเหตุผล ป้ายผลลัพธ์การเรียนรู้ (LO) และระดับของ Bloom</p>
 <div class="score" id="score"></div><div id="quiz"></div>
@@ -135,13 +135,13 @@ fromHash();window.addEventListener('hashchange',fromHash);
 </script></main>
 <footer>การสอบบัญชีตามมาตรฐาน TSA for LCE · ดร.วิทยา อรุณศิริเพ็ชร และ อ.พงษ์ธร ดวงปัญญา · แอปประจำเล่ม ใช้คู่กับตำราและ Handbook TSA for LCE · เนื้อหาเป็นการถอดความของคณะผู้เขียน ไม่ใช่ถ้อยคำของมาตรฐาน</footer><div id="gate" style="position:fixed;inset:0;background:#F2F7FB;z-index:9999;display:flex;align-items:flex-start;justify-content:center;padding:28px 16px;font-family:Sarabun,sans-serif">
 <form id="gf" style="background:#fff;max-width:420px;width:100%;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.12);padding:28px 24px;text-align:center">
-<div style="font-size:22px;color:#1F3864;font-weight:600;margin-bottom:8px">แอปประจำเล่ม · ตำรา TSA for LCE</div>
+<img src="logo.png" alt="Dr.VIT &amp; PD" style="height:56px;display:block;margin:0 auto 12px"><div style="font-size:22px;color:#1D3E9E;font-weight:600;margin-bottom:8px">แอปประจำเล่ม · ตำรา TSA for LCE</div>
 <div style="font-size:15px;color:#333;margin-bottom:16px;line-height:1.5">สำหรับผู้ซื้อตำรา การสอบบัญชีตามมาตรฐาน TSA for LCE<br>ใส่รหัสที่พิมพ์ไว้ในตำรา (หน้าเปิดบทหรือท้ายแบบทดสอบ)</div>
 <hr style="border:0;border-top:1px solid #e3e9f1;margin:0 0 16px">
 <div style="position:relative"><input id="gc" type="password" autocomplete="off" autocapitalize="characters" placeholder="รหัสเข้าแอป" style="width:100%;box-sizing:border-box;font-size:18px;padding:12px 44px 12px 14px;border:1px solid #c8d9e5;border-radius:8px;background:#F2F7FB;letter-spacing:1px">
 <button type="button" id="ge" aria-label="แสดงรหัส" style="position:absolute;right:8px;top:8px;border:0;background:none;font-size:18px;cursor:pointer">👁</button></div>
 <label style="display:flex;align-items:center;gap:8px;margin:12px 0 16px;font-size:15px;text-align:left"><input id="gr" type="checkbox" checked style="width:18px;height:18px"> จำรหัสในเครื่องนี้</label>
-<button type="submit" style="width:100%;background:#1F3864;color:#fff;border:0;border-radius:8px;padding:13px;font-size:17px;font-weight:600;cursor:pointer">เปิดแอป</button>
+<button type="submit" style="width:100%;background:#E8731B;color:#fff;border:0;border-radius:8px;padding:13px;font-size:17px;font-weight:600;cursor:pointer">เปิดแอป</button>
 <div id="gm" style="color:#7A2E2E;font-size:14px;margin-top:10px;min-height:18px"></div>
 </form></div>
 <script>
